@@ -33,11 +33,13 @@ for pergunta in perguntas:
     palpite = input('Escolha uma opção: ')
     try:
         int(palpite)
-    except:
-        FileNotFoundError
-    if palpite == 'Opções'[palpite]:
-        print('certo')
+    except TypeError as error:
+            print('Errado')
 
+    if 'Opções'[int(palpite)] == 'Resposta':
+        print('certo')
+    else:
+         print('Errado')
 
 
 
