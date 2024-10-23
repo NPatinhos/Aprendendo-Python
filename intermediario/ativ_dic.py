@@ -1,13 +1,4 @@
 # Exercício - sistema de perguntas e respostas
-certas = 0
-def checar_resposta(palpite, pergunta['Resposta']):
-    if palpite == pergunta['Resposta']:
-        certas+=1
-        return 'Acertou'
-    else:
-        return 'Errou'
-    
-
 perguntas = [
     {
         'Pergunta': 'Quanto é 2+2?',
@@ -26,13 +17,27 @@ perguntas = [
     },
 ]
 
+# certas = 0
+# def checar_resposta(palpite, pergunta['Resposta']):
+#     if palpite == pergunta['Resposta']:
+#         certas+=1
+#         print('Acertou')
+#     else:
+#         print('Errou')
+
 for pergunta in perguntas:
     print('\n', 'Pergunta:', pergunta.get('Pergunta'))
     for item in enumerate(pergunta['Opções']):
         indice, opcao = item 
         print(f'{indice}) {opcao} ')
     palpite = input('Escolha uma opção: ')
-    print(checar_resposta(palpite, pergunta['Resposta']))
+    try:
+        int(palpite)
+    except:
+        FileNotFoundError
+    if palpite == 'Opções'[palpite]:
+        print('certo')
+
 
 
 
