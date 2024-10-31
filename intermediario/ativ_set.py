@@ -57,3 +57,19 @@ for posicao, lista in enumerate(lista_de_listas_de_inteiros):
         print('-1')
     else:
         conta_idx(lista)
+
+# JEITO MAIS FACIL:
+"""
+def encontra_primeiro_duplicado(lista):
+    numeros_checados = set()
+    primeiro duplicado = -1
+
+    for numero in lista:
+        if numero in numeros_checados:
+            primeiro duplicado = numero
+            break
+            
+        numeros_checados.add(numero)
+
+    return primeiro_duplicado
+"""
