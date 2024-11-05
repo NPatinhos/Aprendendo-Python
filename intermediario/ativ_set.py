@@ -57,3 +57,4 @@ for posicao, lista in enumerate(lista_de_listas_de_inteiros):
         print('-1')
     else:
         conta_idx(lista)
+        
