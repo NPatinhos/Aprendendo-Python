@@ -7,9 +7,9 @@ def multiplica(x, y):
     return x * y
 
 
-def criar_funcao(funcao, x):
-    def interna(y):
-        return funcao(x, y)
+def criar_funcao(funcao, a):
+    def interna(b):
+        return funcao(a, b)
     return interna
 
 
@@ -21,3 +21,8 @@ print(multiplica_por_dez(10))
 
 soma_com_noventaum = criar_funcao(soma, 91)
 print(soma_com_noventaum(10))
+
+
+
+
+
